@@ -1,0 +1,34 @@
+{
+  "name": "rotate-circleci-deploy-keys",
+  "version": "0.0.0",
+  "description": "",
+  "bin": {
+    "rotate-circleci-deploy-keys": "build/src/index.js"
+  },
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build/src"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [],
+  "scripts": {
+    "start": "node build/src",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "gts": "^3.1.1",
+    "typescript": "~4.9.4"
+  },
+  "dependencies": {
+    "axios": "^1.2.2"
+  }
+}
